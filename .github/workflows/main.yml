@@ -44,6 +44,7 @@ jobs:
           pip install pymysql
           pip install bs4
           pip install requests
+          pip install lxml
       - name: run py
         run: |
           python sge_urlList.py
