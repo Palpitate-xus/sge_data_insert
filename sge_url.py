@@ -12,7 +12,9 @@ def purify(str_):
     return result
 
 def data_get(url):
+    import time
     response = requests.get(url, headers=headers)
+    time.sleep(6)
     html = BeautifulSoup(response.text, 'lxml')
     tds = html.find_all('td')
     time = re.findall("\d{4}-\d{1,2}-\d{1,2}", html.text)[0]
