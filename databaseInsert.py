@@ -4,11 +4,11 @@ import pymysql
 # sh-cynosdbmysql-grp-9chdkjpu.sql.tencentcdb.com:23567
 def insertToDatabase(defaultList = []):
     db = pymysql.connect(
-        host='sh-cynosdbmysql-grp-9chdkjpu.sql.tencentcdb.com',
-        user='XuSheng',
-        password='XuSheng717',
-        port=23567,
-        db='precious_metal'
+        host=HOST,
+        user=USER,
+        password=PASSWORD,
+        port=PORT,
+        db=DB
     )
     cur = db.cursor()
     sql = 'INSERT INTO sge_data values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
