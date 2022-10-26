@@ -1,7 +1,6 @@
 import pymysql
 
 
-# sh-cynosdbmysql-grp-9chdkjpu.sql.tencentcdb.com:23567
 def insertToDatabase(defaultList = []):
     db = pymysql.connect(
         host=HOST,
